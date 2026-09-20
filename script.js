@@ -5,9 +5,12 @@ const copyButton = document.querySelector(".copy-address");
 const address = document.querySelector(".location address");
 const copyIcon = document.querySelector(".copy-address img");
 
-card.addEventListener('click', () => {
-    intro.style.display = 'none';
-    invitation.style.display = 'grid';
+card.addEventListener("click", () => {
+    card.classList.add("closing");
+    setTimeout(() => {
+        intro.style.display = "none";
+        invitation.style.display = "grid";
+    }, 500);
 });
 
 copyButton.addEventListener("click", () => {
