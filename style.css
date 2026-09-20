@@ -1,0 +1,210 @@
+* {box-sizing: border-box;}
+
+body {
+    margin: 0;
+    background: #E8E2D8;
+    font-family: "Lora", serif;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.intro {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 90%;
+    max-width: 900px;
+    aspect-ratio: 16/10; /*tỉ lệ rộng, cao */
+    background: #1A1A1A;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer; 
+    animation: float 2.5s ease-in-out infinite;
+}
+
+.icon {
+    position:absolute;
+    top: 1%;
+    width: 18%;
+}
+
+.icon-cap {
+    filter: invert(1);
+    width: 100%;
+}
+
+.text h1 {
+    margin: 0;
+    color: #FFFFF0;
+    font-size: clamp(30px, 5vw, 70px);
+    font-family: "Sacramento", cursive;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.text {
+    position: absolute;
+    white-space: nowrap;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.invitation {
+    display: none;
+    width: 90%;  
+    max-width: 900px; 
+    aspect-ratio: 16/10;
+    grid-template-columns: 40% 60%; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.photos {
+    background: lightgray;
+}
+
+.info {
+    background: #F5F2EC;
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.year {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -20px;
+}
+
+.year-number {
+    display: flex;
+    line-height: 1;
+}
+
+.year-top, .year-bottom {
+    font-family: "Bodoni Moda", serif;
+    letter-spacing: 3px;
+    font-weight: 800;
+    font-style: italic;
+    color: #A6A6A6;
+    font-size: clamp(90px, 10vw, 160px);
+    line-height: 1;
+}
+
+.graduate {
+    font-size: clamp(20px, 4vw, 40px);
+    transform: translateY(clamp(-55px, -4vw, -43px));
+    font-family: "Sacramento", cursive;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+
+.message p {
+    margin: 0;
+    font-weight: 300;
+    font-size: clamp(12px, 2vw, 14px);
+    letter-spacing: 3;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.day {
+    font-size: clamp(50px, 7vw, 100px);
+}
+
+.date-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: clamp(18px, 2vw, 24px);
+    gap: 5px;
+}
+
+.location {
+    margin-top: 20px;
+}
+
+.location address {
+    font-size: 16px;
+    text-align: center;
+    max-width: 400px;
+    line-height: 1.5;
+}
+
+.copy-address {
+    border: none;
+    background: none;
+    padding: 0;
+    display: inline;
+    vertical-align: middle;
+}
+
+.copy-address img {
+    width: 18px;
+    height: 18px;
+    transition: opacity 0.2s ease;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.phone a {
+    color: inherit;
+    text-decoration: none;
+    letter-spacing: 1.15px;
+}
+
+@media (max-width: 768px) {
+    .invitation {
+        width:100%;
+        height: 100vh;
+        max-width: none;
+    }
+
+    .year-number {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .year-top, .year-bottom {
+        font-size: 120px;
+    }
+
+    .graduate {
+        font-size: 36px;
+        transform: translateY(-150px);
+    }  
+
+    .location address {
+        font-size: 14px;
+        max-width: 200px;
+    }
+}
